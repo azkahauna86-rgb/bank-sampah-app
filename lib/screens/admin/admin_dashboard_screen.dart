@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import '../../services/auth_service.dart';
 import 'kelola_sampah_screen.dart';
 import 'kelola_transaksi_screen.dart';
+import 'admin_chat_screen.dart';
 
 class AdminDashboardScreen extends StatelessWidget {
   const AdminDashboardScreen({super.key});
@@ -10,7 +11,6 @@ class AdminDashboardScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final auth = Provider.of<AuthService>(context, listen: false);
-
     return Scaffold(
       backgroundColor: const Color(0xFFF4FBF6),
       body: CustomScrollView(
@@ -38,19 +38,12 @@ class AdminDashboardScreen extends StatelessWidget {
                           color: Colors.white.withOpacity(0.2),
                           borderRadius: BorderRadius.circular(8),
                         ),
-                        child: const Text('ADMIN PANEL',
-                            style: TextStyle(color: Colors.white, fontSize: 10, fontWeight: FontWeight.bold, letterSpacing: 1)),
+                        child: const Text('ADMIN PANEL', style: TextStyle(color: Colors.white, fontSize: 10, fontWeight: FontWeight.bold, letterSpacing: 1)),
                       ),
                       const SizedBox(height: 10),
-                      const Text(
-                        'Dashboard Admin ⚙️',
-                        style: TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.bold),
-                      ),
+                      const Text('Dashboard Admin ⚙️', style: TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.bold)),
                       const SizedBox(height: 4),
-                      Text(
-                        'Kelola aplikasi bank sampah',
-                        style: TextStyle(color: Colors.white.withOpacity(0.85), fontSize: 13),
-                      ),
+                      Text('Kelola aplikasi bank sampah', style: TextStyle(color: Colors.white.withOpacity(0.85), fontSize: 13)),
                     ],
                   ),
                   GestureDetector(
@@ -90,6 +83,14 @@ class AdminDashboardScreen extends StatelessWidget {
                   gradientColors: const [Color(0xFF1976D2), Color(0xFF0D47A1)],
                   onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const KelolaTransaksiScreen())),
                 ),
+                const SizedBox(height: 14),
+                _AdminMenuTile(
+                  icon: Icons.chat_rounded,
+                  label: 'Pesan Masuk',
+                  subtitle: 'Balas pesan dan pertanyaan dari user',
+                  gradientColors: const [Color(0xFF7B1FA2), Color(0xFF4A148C)],
+                  onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const AdminChatListScreen())),
+                ),
               ]),
             ),
           ),
@@ -104,7 +105,7 @@ class AdminDashboardScreen extends StatelessWidget {
       builder: (_) => AlertDialog(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
         title: const Text('Keluar Akun?'),
-        content: const Text('Lu yakin mau logout dari aplikasi?'),
+        content: const Text('Yakin mau logout dari aplikasi?'),
         actions: [
           TextButton(onPressed: () => Navigator.pop(context), child: const Text('Batal')),
           ElevatedButton(
@@ -128,13 +129,7 @@ class _AdminMenuTile extends StatelessWidget {
   final List<Color> gradientColors;
   final VoidCallback onTap;
 
-  const _AdminMenuTile({
-    required this.icon,
-    required this.label,
-    required this.subtitle,
-    required this.gradientColors,
-    required this.onTap,
-  });
+  const _AdminMenuTile({required this.icon, required this.label, required this.subtitle, required this.gradientColors, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
