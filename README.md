@@ -162,7 +162,10 @@ lib/
 
 | Nama | NIM | Prodi |
 |------|-----|-------|
-| **Azka** | - | Sistem Informasi |
+| **Azka** | 24SA21A077 | Sistem Informasi |
+| **Kevin** | 24SA21A066 | Sistem Informasi |
+| **Aziz** | 24SA21A071 | Sistem Informasi |
+| **Ade** | 24SA21A093 | Sistem Informasi |
 
 **Universitas AMIKOM Purwokerto**
 **Mata Kuliah:** Pemrograman Mobile
@@ -173,13 +176,6 @@ lib/
 ## 📄 Lisensi
 
 Project ini dibuat untuk keperluan akademik — Final Project Pemrograman Mobile.
-
+71
 ---
-
-<div align="center">
-
-**Dibuat dengan ❤️ menggunakan Flutter & Firebase**
-
-⭐ Jangan lupa kasih bintang kalau project ini membantu!
-
 </div>
