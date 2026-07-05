@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "688927756155",
+    "project_id": "bank-sampah-azka",
+    "storage_bucket": "bank-sampah-azka.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:688927756155:android:7bc46c48db0c89c6a1f7de",
+        "android_client_info": {
+          "package_name": "com.example.bank_sampah"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTt6Uv5EdQDrFlK8cwn74DLaqEkkINZ8s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
